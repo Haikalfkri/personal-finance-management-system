@@ -1,0 +1,17 @@
+server:
+  error:
+    include-message: ALWAYS
+  port: 3000
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db-personal-finance-management-system
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
